@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>追剧宝 - 影视大全</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .hero {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 48px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.95;
+            max-width: 520px;
+            margin: 0 auto;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 24px;
+            padding: 36px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            margin-bottom: 24px;
+        }
+
+        .download-section {
+            text-align: center;
+        }
+
+        .version {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            text-decoration: none;
+            padding: 16px 36px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(102, 126, 234, 0.5);
+        }
+
+        .btn svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        .secondary-link {
+            display: inline-block;
+            margin-top: 16px;
+            color: #667eea;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .secondary-link:hover {
+            text-decoration: underline;
+        }
+
+        .features h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+        }
+
+        .feature-item {
+            background: #f8f9ff;
+            border-radius: 16px;
+            padding: 20px;
+            border: 1px solid #eef0ff;
+        }
+
+        .feature-item h3 {
+            font-size: 16px;
+            color: #667eea;
+            margin-bottom: 8px;
+        }
+
+        .feature-item p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .footer {
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+            font-size: 13px;
+            margin-top: 40px;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            .card {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="hero">
+            <h1>追剧宝</h1>
+            <p>一个 Vibe Coding 驱动的 Android 影视聚合应用。多源聚合、智能续播、手势播放、投屏下载，一站搞定。</p>
+            <div class="badge">v2.0 现已发布</div>
+        </header>
+
+        <section class="card download-section">
+            <div class="version">最新版本：v2.0</div>
+            <a class="btn" href="https://github.com/hwwel/zhuijubao/releases/latest/download/app-debug.apk" download>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                下载 APK
+            </a>
+            <br>
+            <a class="secondary-link" href="https://github.com/hwwel/zhuijubao/releases">查看所有版本</a>
+            <br>
+            <a class="secondary-link" href="https://github.com/hwwel/zhuijubao">查看源码</a>
+        </section>
+
+        <section class="card features">
+            <h2>核心功能</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3>多源聚合</h3>
+                    <p>内置云端采集站，支持自定义 API 源，一个 App 聚合多平台影视资源。</p>
+                </div>
+                <div class="feature-item">
+                    <h3>智能续播</h3>
+                    <p>自动记录观看进度，下次打开从上次位置继续播放。</p>
+                </div>
+                <div class="feature-item">
+                    <h3>强大播放</h3>
+                    <p>支持 ExoPlayer / IJKPlayer / MediaPlayer 内核切换，手势控制与长按倍速。</p>
+                </div>
+                <div class="feature-item">
+                    <h3>投屏 & 下载</h3>
+                    <p>DLNA 投屏到电视/盒子，支持视频下载管理。</p>
+                </div>
+                <div class="feature-item">
+                    <h3>缓存管理</h3>
+                    <p>按类别清理图片、视频、网络缓存和历史记录，设置项不会被误清。</p>
+                </div>
+                <div class="feature-item">
+                    <h3>个性设置</h3>
+                    <p>主题模式、画面比例、解码器、画质偏好、自动画中画等自由配置。</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>本项目为学习交流使用，视频资源均来自第三方公开接口，版权归原权利人所有。</p>
+            <p>Made with Vibe Coding · <a href="https://github.com/hwwel/zhuijubao">GitHub</a></p>
+        </footer>
+    </div>
+</body>
+</html>
