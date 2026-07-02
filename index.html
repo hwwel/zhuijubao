@@ -1,231 +1,533 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>追剧宝 - 影视大全</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
-
-        .hero {
-            text-align: center;
-            color: #fff;
-            margin-bottom: 48px;
-        }
-
-        .hero h1 {
-            font-size: 48px;
-            font-weight: 800;
-            margin-bottom: 16px;
-            text-shadow: 0 4px 20px rgba(0,0,0,0.2);
-        }
-
-        .hero p {
-            font-size: 18px;
-            opacity: 0.95;
-            max-width: 520px;
-            margin: 0 auto;
-        }
-
-        .badge {
-            display: inline-block;
-            background: rgba(255,255,255,0.2);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.3);
-            color: #fff;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 14px;
-            margin-top: 20px;
-        }
-
-        .card {
-            background: #fff;
-            border-radius: 24px;
-            padding: 36px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
-            margin-bottom: 24px;
-        }
-
-        .download-section {
-            text-align: center;
-        }
-
-        .version {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 12px;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #fff;
-            text-decoration: none;
-            padding: 16px 36px;
-            border-radius: 12px;
-            font-size: 18px;
-            font-weight: 600;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 32px rgba(102, 126, 234, 0.5);
-        }
-
-        .btn svg {
-            width: 22px;
-            height: 22px;
-        }
-
-        .secondary-link {
-            display: inline-block;
-            margin-top: 16px;
-            color: #667eea;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        .secondary-link:hover {
-            text-decoration: underline;
-        }
-
-        .features h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #222;
-        }
-
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 16px;
-        }
-
-        .feature-item {
-            background: #f8f9ff;
-            border-radius: 16px;
-            padding: 20px;
-            border: 1px solid #eef0ff;
-        }
-
-        .feature-item h3 {
-            font-size: 16px;
-            color: #667eea;
-            margin-bottom: 8px;
-        }
-
-        .feature-item p {
-            font-size: 14px;
-            color: #555;
-        }
-
-        .footer {
-            text-align: center;
-            color: rgba(255,255,255,0.8);
-            font-size: 13px;
-            margin-top: 40px;
-        }
-
-        .footer a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 600px) {
-            .hero h1 {
-                font-size: 36px;
+    <title>追剧宝 v2.0 - 影视大全下载</title>
+    <meta name="description" content="追剧宝是一款 Vibe Coding 驱动的 Android 影视聚合应用，多源聚合、智能续播、手势播放、投屏下载一站搞定。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Work+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            900: '#0F0F23',
+                            800: '#1E1B4B',
+                            cta: '#E11D48',
+                            'cta-hover': '#BE123C',
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Outfit', 'sans-serif'],
+                        body: ['Work Sans', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'glow': '0 0 60px -15px rgba(225, 29, 72, 0.4)',
+                        'card': '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
+                    }
+                }
             }
-            .card {
-                padding: 24px;
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background-color: #000000;
+            color: #F8FAFC;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #F8FAFC 0%, #E11D48 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .mesh-bg {
+            background:
+                radial-gradient(at 0% 0%, rgba(30, 27, 75, 0.8) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(225, 29, 72, 0.2) 0px, transparent 40%),
+                radial-gradient(at 100% 100%, rgba(30, 27, 75, 0.6) 0px, transparent 50%),
+                #000000;
+        }
+
+        .phone-frame {
+            border: 12px solid #1E1B4B;
+            border-radius: 36px;
+            background: #0F0F23;
+            box-shadow: 0 0 80px rgba(225, 29, 72, 0.25), inset 0 0 40px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .phone-notch {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 24px;
+            background: #1E1B4B;
+            border-bottom-left-radius: 16px;
+            border-bottom-right-radius: 16px;
+            z-index: 10;
+        }
+
+        .screen-content {
+            height: 100%;
+            padding: 40px 16px 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .screen-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 12px;
+        }
+
+        .screen-poster {
+            aspect-ratio: 3/4;
+            background: linear-gradient(135deg, #1E1B4B 0%, #E11D48 100%);
+            border-radius: 10px;
+        }
+
+        .star-filled {
+            color: #FBBF24;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
             }
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <header class="hero">
-            <h1>追剧宝</h1>
-            <p>一个 Vibe Coding 驱动的 Android 影视聚合应用。多源聚合、智能续播、手势播放、投屏下载，一站搞定。</p>
-            <div class="badge">v2.0 现已发布</div>
-        </header>
 
-        <section class="card download-section">
-            <div class="version">最新版本：v2.0</div>
-            <a class="btn" href="https://github.com/hwwel/zhuijubao/releases/latest/download/app-debug.apk" download>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                    <polyline points="7 10 12 15 17 10"></polyline>
-                    <line x1="12" y1="15" x2="12" y2="3"></line>
+<body class="mesh-bg antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/70 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div
+                    class="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-cta to-brand-800 flex items-center justify-center">
+                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                    </svg>
+                </div>
+                <span class="font-heading font-bold text-xl tracking-tight">追剧宝</span>
+            </div>
+            <a href="https://github.com/hwwel/zhuijubao/releases/download/v2.0/app-debug.apk" download
+                class="hidden sm:inline-flex items-center gap-2 bg-brand-cta hover:bg-brand-cta-hover text-white font-semibold px-5 py-2.5 rounded-full transition-all duration-200 cursor-pointer shadow-glow hover:shadow-lg hover:-translate-y-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                 </svg>
                 下载 APK
             </a>
-            <br>
-            <a class="secondary-link" href="https://github.com/hwwel/zhuijubao/releases">查看所有版本</a>
-            <br>
-            <a class="secondary-link" href="https://github.com/hwwel/zhuijubao">查看源码</a>
-        </section>
+        </div>
+    </nav>
 
-        <section class="card features">
-            <h2>核心功能</h2>
-            <div class="feature-grid">
-                <div class="feature-item">
-                    <h3>多源聚合</h3>
-                    <p>内置云端采集站，支持自定义 API 源，一个 App 聚合多平台影视资源。</p>
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-44 lg:pb-32 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+            <div class="text-center lg:text-left">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-sm text-slate-300 mb-6">
+                    <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                    v2.0 现已发布
                 </div>
-                <div class="feature-item">
-                    <h3>智能续播</h3>
-                    <p>自动记录观看进度，下次打开从上次位置继续播放。</p>
+                <h1 class="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-[1.1] mb-6">
+                    一个 App<br>
+                    <span class="gradient-text">追遍全网好剧</span>
+                </h1>
+                <p class="text-lg text-slate-300 mb-8 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+                    追剧宝是一款 Vibe Coding 驱动的 Android 影视聚合应用。多源聚合、智能续播、手势播放、投屏下载，一站搞定。
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                    <a href="https://github.com/hwwel/zhuijubao/releases/download/v2.0/app-debug.apk" download
+                        class="group inline-flex items-center gap-3 bg-brand-cta hover:bg-brand-cta-hover text-white font-bold text-lg px-8 py-4 rounded-2xl transition-all duration-200 cursor-pointer shadow-glow hover:shadow-xl hover:-translate-y-1 min-h-[56px]">
+                        <svg class="w-6 h-6 transition-transform group-hover:translate-y-0.5" fill="none"
+                            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                        立即下载
+                    </a>
+                    <a href="https://github.com/hwwel/zhuijubao" target="_blank" rel="noopener"
+                        class="inline-flex items-center gap-2 text-slate-300 hover:text-white font-medium px-6 py-4 rounded-2xl border border-white/10 hover:border-white/20 transition-all duration-200 cursor-pointer min-h-[56px]">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        查看源码
+                    </a>
                 </div>
-                <div class="feature-item">
-                    <h3>强大播放</h3>
-                    <p>支持 ExoPlayer / IJKPlayer / MediaPlayer 内核切换，手势控制与长按倍速。</p>
-                </div>
-                <div class="feature-item">
-                    <h3>投屏 & 下载</h3>
-                    <p>DLNA 投屏到电视/盒子，支持视频下载管理。</p>
-                </div>
-                <div class="feature-item">
-                    <h3>缓存管理</h3>
-                    <p>按类别清理图片、视频、网络缓存和历史记录，设置项不会被误清。</p>
-                </div>
-                <div class="feature-item">
-                    <h3>个性设置</h3>
-                    <p>主题模式、画面比例、解码器、画质偏好、自动画中画等自由配置。</p>
+                <div class="mt-8 flex items-center justify-center lg:justify-start gap-6 text-sm text-slate-400">
+                    <div class="flex items-center gap-1.5">
+                        <svg class="w-4 h-4 star-filled" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <span class="text-white font-semibold">4.8</span>
+                        <span>用户评分</span>
+                    </div>
+                    <div class="w-px h-4 bg-white/20"></div>
+                    <div>Android 8.0+</div>
+                    <div class="w-px h-4 bg-white/20"></div>
+                    <div>完全免费</div>
                 </div>
             </div>
-        </section>
 
-        <footer class="footer">
-            <p>本项目为学习交流使用，视频资源均来自第三方公开接口，版权归原权利人所有。</p>
-            <p>Made with Vibe Coding · <a href="https://github.com/hwwel/zhuijubao">GitHub</a></p>
-        </footer>
-    </div>
+            <!-- Phone Mockup -->
+            <div class="flex justify-center lg:justify-end">
+                <div class="phone-frame w-[260px] h-[540px] sm:w-[300px] sm:h-[620px]">
+                    <div class="phone-notch"></div>
+                    <div class="screen-content">
+                        <div class="screen-card">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div
+                                    class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-cta to-brand-800 flex items-center justify-center">
+                                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                                <div class="text-sm font-semibold">追剧宝</div>
+                            </div>
+                            <div class="h-2 w-24 bg-white/10 rounded mb-2"></div>
+                            <div class="h-2 w-16 bg-white/10 rounded"></div>
+                        </div>
+                        <div class="grid grid-cols-3 gap-2">
+                            <div class="screen-poster"></div>
+                            <div class="screen-poster"
+                                style="background: linear-gradient(135deg, #312E81 0%, #1E1B4B 100%)"></div>
+                            <div class="screen-poster"
+                                style="background: linear-gradient(135deg, #E11D48 0%, #831843 100%)"></div>
+                            <div class="screen-poster"
+                                style="background: linear-gradient(135deg, #1E1B4B 0%, #0F0F23 100%)"></div>
+                            <div class="screen-poster"
+                                style="background: linear-gradient(135deg, #BE123C 0%, #881337 100%)"></div>
+                            <div class="screen-poster"
+                                style="background: linear-gradient(135deg, #4338CA 0%, #1E1B4B 100%)"></div>
+                        </div>
+                        <div class="screen-card mt-auto">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-brand-cta/20 flex items-center justify-center">
+                                    <svg class="w-5 h-5 text-brand-cta" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-semibold">正在播放</div>
+                                    <div class="text-xs text-slate-400">第 12 集 · 35:20</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="border-y border-white/10 bg-white/[0.02]">
+        <div class="max-w-6xl mx-auto px-6 py-10">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="font-heading text-3xl font-bold text-white mb-1">70+</div>
+                    <div class="text-sm text-slate-400">云端采集站</div>
+                </div>
+                <div>
+                    <div class="font-heading text-3xl font-bold text-white mb-1">3</div>
+                    <div class="text-sm text-slate-400">播放内核</div>
+                </div>
+                <div>
+                    <div class="font-heading text-3xl font-bold text-white mb-1">0</div>
+                    <div class="text-sm text-slate-400">元付费</div>
+                </div>
+                <div>
+                    <div class="font-heading text-3xl font-bold text-white mb-1">100%</div>
+                    <div class="text-sm text-slate-400">本地数据</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 lg:py-28">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold mb-4">为追剧而生</h2>
+                <p class="text-slate-400 text-lg">从资源聚合到播放体验，每一个细节都为了让你更专注于内容本身。</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Feature 1 -->
+                <div
+                    class="group p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-brand-cta/50 transition-all duration-200 cursor-pointer hover:-translate-y-1">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-brand-cta/10 flex items-center justify-center mb-4 group-hover:bg-brand-cta/20 transition-colors">
+                        <svg class="w-6 h-6 text-brand-cta" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-xl font-semibold mb-2">多源聚合</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">内置多个云端采集站，同时支持自定义 API 源，一个应用聚合多平台资源。</p>
+                </div>
+                <!-- Feature 2 -->
+                <div
+                    class="group p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-brand-cta/50 transition-all duration-200 cursor-pointer hover:-translate-y-1">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-brand-cta/10 flex items-center justify-center mb-4 group-hover:bg-brand-cta/20 transition-colors">
+                        <svg class="w-6 h-6 text-brand-cta" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-xl font-semibold mb-2">智能续播</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">自动记录每部影片的观看进度，下次打开直接从上次位置继续播放。</p>
+                </div>
+                <!-- Feature 3 -->
+                <div
+                    class="group p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-brand-cta/50 transition-all duration-200 cursor-pointer hover:-translate-y-1">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-brand-cta/10 flex items-center justify-center mb-4 group-hover:bg-brand-cta/20 transition-colors">
+                        <svg class="w-6 h-6 text-brand-cta" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-xl font-semibold mb-2">手势播放</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">双击暂停、滑动调节进度/音量/亮度、长按倍速，操作一气呵成。</p>
+                </div>
+                <!-- Feature 4 -->
+                <div
+                    class="group p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-brand-cta/50 transition-all duration-200 cursor-pointer hover:-translate-y-1">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-brand-cta/10 flex items-center justify-center mb-4 group-hover:bg-brand-cta/20 transition-colors">
+                        <svg class="w-6 h-6 text-brand-cta" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-xl font-semibold mb-2">一键投屏</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">支持 DLNA 协议，轻松将视频投屏到电视或盒子，大屏观影更畅快。</p>
+                </div>
+                <!-- Feature 5 -->
+                <div
+                    class="group p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-brand-cta/50 transition-all duration-200 cursor-pointer hover:-translate-y-1">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-brand-cta/10 flex items-center justify-center mb-4 group-hover:bg-brand-cta/20 transition-colors">
+                        <svg class="w-6 h-6 text-brand-cta" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-xl font-semibold mb-2">下载管理</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">支持视频下载到本地，WiFi 环境下自动下载，随时随地离线观看。</p>
+                </div>
+                <!-- Feature 6 -->
+                <div
+                    class="group p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-brand-cta/50 transition-all duration-200 cursor-pointer hover:-translate-y-1">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-brand-cta/10 flex items-center justify-center mb-4 group-hover:bg-brand-cta/20 transition-colors">
+                        <svg class="w-6 h-6 text-brand-cta" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-xl font-semibold mb-2">个性设置</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">主题模式、播放内核、解码器、画质偏好、自动画中画等自由配置。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof / Reviews -->
+    <section class="py-20 lg:py-28 border-t border-white/10">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold mb-4">用户怎么说</h2>
+                <p class="text-slate-400 text-lg">来自真实用户的反馈，让我们不断优化追剧体验。</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="p-6 rounded-2xl bg-white/[0.03] border border-white/10">
+                    <div class="flex gap-1 mb-4">
+                        <svg class="w-5 h-5 star-filled" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-5 h-5 star-filled" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-5 h-5 star-filled" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-5 h-5 star-filled" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-5 h-5 star-filled" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                    </div>
+                    <p class="text-slate-300 mb-6 leading-relaxed">"源很多，一个 App 就能搜到想看的剧，终于不用装一堆视频软件了。"</p>
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 rounded-full bg-gradient-to-br from-brand-cta to-brand-800 flex items-center justify-center text-sm font-bold">
+                            L</div>
+                        <div>
+                            <div class="font-semibold text-sm">Lin</div>
+                            <div class="text-xs text-slate-500">Android 用户</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 rounded-2xl bg-white/[0.03] border border-white/10">
+                    <div class="flex gap-1 mb-4">
+                        <svg class="w-5 h-5 star-filled" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-5 h-5 star-filled" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-5 h-5 star-filled" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-5 h-5 star-filled" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-5 h-5 star-filled" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                    </div>
+                    <p class="text-slate-300 mb-6 leading-relaxed">"手势操作很顺手，长按加速看番剧特别方便，续播功能也很稳。"</p>
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 rounded-full bg-gradient-to-br from-brand-800 to-brand-900 flex items-center justify-center text-sm font-bold">
+                            M</div>
+                        <div>
+                            <div class="font-semibold text-sm">Ming</div>
+                            <div class="text-xs text-slate-500">追番爱好者</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 rounded-2xl bg-white/[0.03] border border-white/10">
+                    <div class="flex gap-1 mb-4">
+                        <svg class="w-5 h-5 star-filled" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-5 h-5 star-filled" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-5 h-5 star-filled" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-5 h-5 star-filled" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-5 h-5 star-filled" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                    </div>
+                    <p class="text-slate-300 mb-6 leading-relaxed">"投屏功能很实用，周末直接把手机上的剧投到电视上看，体验很流畅。"</p>
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-600 to-brand-800 flex items-center justify-center text-sm font-bold">
+                            W</div>
+                        <div>
+                            <div class="font-semibold text-sm">Wei</div>
+                            <div class="text-xs text-slate-500">家庭用户</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-20 lg:py-28 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-cta/10 to-transparent"></div>
+        <div class="max-w-4xl mx-auto px-6 text-center relative">
+            <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">准备好开始追剧了吗？</h2>
+            <p class="text-slate-300 text-lg mb-10 max-w-xl mx-auto">下载追剧宝 v2.0，解锁多源聚合、智能续播、手势播放等完整体验。</p>
+            <a href="https://github.com/hwwel/zhuijubao/releases/download/v2.0/app-debug.apk" download
+                class="group inline-flex items-center gap-3 bg-brand-cta hover:bg-brand-cta-hover text-white font-bold text-lg px-10 py-5 rounded-2xl transition-all duration-200 cursor-pointer shadow-glow hover:shadow-xl hover:-translate-y-1 min-h-[60px]">
+                <svg class="w-6 h-6 transition-transform group-hover:translate-y-0.5" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+                下载追剧宝 v2.0
+            </a>
+            <p class="mt-6 text-sm text-slate-500">适用于 Android 8.0 及以上设备 · APK 文件大小约 20MB</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 py-10">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <div
+                    class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-cta to-brand-800 flex items-center justify-center">
+                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                    </svg>
+                </div>
+                <span class="font-heading font-bold text-lg">追剧宝</span>
+            </div>
+            <div class="text-slate-500 text-sm text-center sm:text-right">
+                <p>Made with Vibe Coding · <a href="https://github.com/hwwel/zhuijubao" target="_blank" rel="noopener"
+                        class="text-slate-400 hover:text-white transition-colors cursor-pointer">GitHub</a></p>
+                <p class="mt-1">本项目仅供学习交流，视频资源来自第三方公开接口。</p>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
