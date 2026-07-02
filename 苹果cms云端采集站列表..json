@@ -1,0 +1,677 @@
+[
+    {
+        "name": "量子资源",
+        "url": "https://cj.lziapi.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "main",
+        "recommend": 1,
+        "verified": true,
+        "remark": "全网最全资源站，13万+数据，更新快"
+    },
+    {
+        "name": "非凡资源",
+        "url": "https://cj.ffzyapi.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "main",
+        "recommend": 1,
+        "verified": true,
+        "remark": "9万+数据，更新速度快，高清资源多"
+    },
+    {
+        "name": "光速资源",
+        "url": "https://api.guangsuapi.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "main",
+        "recommend": 1,
+        "verified": true,
+        "remark": "综合资源站，更新及时"
+    },
+    {
+        "name": "红牛资源",
+        "url": "https://www.hongniuzy2.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "main",
+        "recommend": 1,
+        "verified": true,
+        "remark": "老牌综合资源站，稳定可靠"
+    },
+    {
+        "name": "暴风资源",
+        "url": "https://bfzyapi.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "main",
+        "recommend": 1,
+        "verified": true,
+        "remark": "综合影视资源，更新稳定"
+    },
+    {
+        "name": "新浪资源",
+        "url": "https://api.xinlangapi.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "main",
+        "recommend": 1,
+        "verified": true,
+        "remark": "综合影视资源站"
+    },
+    {
+        "name": "闪电资源",
+        "url": "https://www.sdzyapi.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "main",
+        "recommend": 1,
+        "verified": true,
+        "remark": "综合影视资源，稳定"
+    },
+    {
+        "name": "卧龙资源",
+        "url": "https://collect.wolongzyw.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "main",
+        "recommend": 1,
+        "verified": true,
+        "remark": "综合影视资源站"
+    },
+    {
+        "name": "索尼资源",
+        "url": "https://suonizy.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "vod",
+        "recommend": 0,
+        "verified": false,
+        "remark": "影视资源"
+    },
+    {
+        "name": "最大 资源",
+        "url": "https://www.zuidazy.co/api.php/provide/vod/",
+        "type": "2",
+        "category": "vod",
+        "recommend": 0,
+        "verified": false,
+        "remark": "影视资源"
+    },
+    {
+        "name": "茅台资源",
+        "url": "https://mtzy.tv/api.php/provide/vod/",
+        "type": "2",
+        "category": "vod",
+        "recommend": 0,
+        "verified": false,
+        "remark": "影视资源"
+    },
+    {
+        "name": "360资源",
+        "url": "https://www.360zy.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "vod",
+        "recommend": 0,
+        "verified": false,
+        "remark": "影视资源"
+    },
+    {
+        "name": "如意资源",
+        "url": "https://ryzy.tv/api.php/provide/vod/",
+        "type": "2",
+        "category": "vod",
+        "recommend": 0,
+        "verified": false,
+        "remark": "影视资源"
+    },
+    {
+        "name": "魔都资源",
+        "url": "https://moduzy.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "vod",
+        "recommend": 0,
+        "verified": false,
+        "remark": "影视资源"
+    },
+    {
+        "name": "豪华资源",
+        "url": "https://huohuzy.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "vod",
+        "recommend": 0,
+        "verified": false,
+        "remark": "影视资源"
+    },
+    {
+        "name": "麒麟资源",
+        "url": "https://qilinzyz.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "vod",
+        "recommend": 0,
+        "verified": false,
+        "remark": "影视资源"
+    },
+    {
+        "name": "电影天堂",
+        "url": "https://dyttzyw.tv/api.php/provide/vod/",
+        "type": "2",
+        "category": "vod",
+        "recommend": 0,
+        "verified": false,
+        "remark": "影视资源"
+    },
+    {
+        "name": "无尽资源",
+        "url": "https://wujinzy.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "vod",
+        "recommend": 0,
+        "verified": false,
+        "remark": "影视资源"
+    },
+    {
+        "name": "极速资源",
+        "url": "https://www.jisuzy.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "vod",
+        "recommend": 0,
+        "verified": false,
+        "remark": "影视资源"
+    },
+    {
+        "name": "虎牙资源",
+        "url": "https://huyazy.net/api.php/provide/vod/",
+        "type": "2",
+        "category": "vod",
+        "recommend": 0,
+        "verified": false,
+        "remark": "影视资源"
+    },
+    {
+        "name": "豆瓣资源",
+        "url": "https://dbzy.tv/api.php/provide/vod/",
+        "type": "2",
+        "category": "vod",
+        "recommend": 0,
+        "verified": false,
+        "remark": "影视资源"
+    },
+    {
+        "name": "影剧资源",
+        "url": "https://yjzy.me/api.php/provide/vod/",
+        "type": "2",
+        "category": "vod",
+        "recommend": 0,
+        "verified": false,
+        "remark": "影视资源"
+    },
+    {
+        "name": "天涯影视",
+        "url": "https://tyyszy.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "vod",
+        "recommend": 0,
+        "verified": false,
+        "remark": "影视资源"
+    },
+    {
+        "name": "猫眼资源",
+        "url": "https://www.maoyanzy.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "vod",
+        "recommend": 0,
+        "verified": false,
+        "remark": "影视资源"
+    },
+    {
+        "name": "牛牛资源",
+        "url": "https://niuniuzy.cc/api.php/provide/vod/",
+        "type": "2",
+        "category": "vod",
+        "recommend": 0,
+        "verified": false,
+        "remark": "影 视资源"
+    },
+    {
+        "name": "OK资源",
+        "url": "https://okzyw.cc/api.php/provide/vod/",
+        "type": "2",
+        "category": "vod",
+        "recommend": 0,
+        "verified": false,
+        "remark": "影视资源"
+    },
+    {
+        "name": "鸭鸭资源",
+        "url": "https://yayazy2.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "vod",
+        "recommend": 0,
+        "verified": false,
+        "remark": "影视资源"
+    },
+    {
+        "name": "爱奇艺资源",
+        "url": "https://www.iqiyizy.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "vod",
+        "recommend": 0,
+        "verified": false,
+        "remark": "影视资源"
+    },
+    {
+        "name": "天空资源",
+        "url": "https://api.tiankongapi.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "vod",
+        "recommend": 0,
+        "verified": false,
+        "remark": " 影视资源"
+    },
+    {
+        "name": "飞速资源",
+        "url": "https://www.feisuzyapi.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "vod",
+        "recommend": 0,
+        "verified": false,
+        "remark": "影视资源"
+    },
+    {
+        "name": "淘片 资源",
+        "url": "https://taopianapi.com/home/cjapi/vod/",
+        "type": "2",
+        "category": "vod",
+        "recommend": 0,
+        "verified": false,
+        "remark": "影视资源"
+    },
+    {
+        "name": "百度资源",
+        "url": "https://api.apibdzy.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "vod",
+        "recommend": 0,
+        "verified": false,
+        "remark": "影视资源"
+    },
+    {
+        "name": "U酷资 源",
+        "url": "https://www.ukuapi.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "vod",
+        "recommend": 0,
+        "verified": false,
+        "remark": "影视资源"
+    },
+    {
+        "name": "iKun资源",
+        "url": "https://ikunzyapi.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "vod",
+        "recommend": 0,
+        "verified": false,
+        "remark": "影视资源"
+    },
+    {
+        "name": "快车 资源",
+        "url": "https://caiji.kcziyuan.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "vod",
+        "recommend": 0,
+        "verified": false,
+        "remark": "影视资源"
+    },
+    {
+        "name": "金鹰资源",
+        "url": "https://jinyingzy.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "vod",
+        "recommend": 0,
+        "verified": false,
+        "remark": "影视资源"
+    },
+    {
+        "name": "华为资源",
+        "url": "https://cj.hwzyapi.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "vod",
+        "recommend": 0,
+        "verified": false,
+        "remark": "影视资源"
+    },
+    {
+        "name": "樱花资源",
+        "url": "https://m3u8.apiyhzy.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "vod",
+        "recommend": 0,
+        "verified": false,
+        "remark": "影视资源"
+    },
+    {
+        "name": "优质资源",
+        "url": "https://1080zyk20.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "vod",
+        "recommend": 0,
+        "verified": false,
+        "remark": "影视资源"
+    },
+    {
+        "name": "旺旺短剧",
+        "url": "https://wwzy.tv/api.php/provide/vod/",
+        "type": "2",
+        "category": "short",
+        "recommend": 0,
+        "verified": false,
+        "remark": "短剧资源"
+    },
+    {
+        "name": "锦鲤短剧",
+        "url": "https://jinlidj.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "short",
+        "recommend": 0,
+        "verified": false,
+        "remark": "短剧资源"
+    },
+    {
+        "name": "量子短剧",
+        "url": "https://cj.lziapi.com/api.php/provide/vod/?t=46",
+        "type": "2",
+        "category": "short",
+        "recommend": 1,
+        "verified": true,
+        "remark": "量子资源站短 剧分类"
+    },
+    {
+        "name": "非凡短剧",
+        "url": "https://cj.ffzyapi.com/api.php/provide/vod/?t=36",
+        "type": "2",
+        "category": "short",
+        "recommend": 1,
+        "verified": true,
+        "remark": "非凡资源站短剧分类"
+    },
+    {
+        "name": "量子动漫",
+        "url": "https://cj.lziapi.com/api.php/provide/vod/?t=4",
+        "type": "2",
+        "category": "anime",
+        "recommend": 1,
+        "verified": true,
+        "remark": "量子资源站动漫分类"
+    },
+    {
+        "name": "乐播资源",
+        "url": "https://lebozy.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "midnight",
+        "recommend": 0,
+        "verified": false,
+        "remark": "午夜资源"
+    },
+    {
+        "name": "大地资源",
+        "url": "https://dadizy.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "midnight",
+        "recommend": 0,
+        "verified": false,
+        "remark": "午夜资源"
+    },
+    {
+        "name": "JKUN资源",
+        "url": "https://jkunzy.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "midnight",
+        "recommend": 0,
+        "verified": false,
+        "remark": "午夜资源"
+    },
+    {
+        "name": "玉兔资源",
+        "url": "https://yutuzy.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "midnight",
+        "recommend": 0,
+        "verified": false,
+        "remark": "午夜资源"
+    },
+    {
+        "name": "精品X资源",
+        "url": "https://jingpinx.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "midnight",
+        "recommend": 0,
+        "verified": false,
+        "remark": "午夜资源"
+    },
+    {
+        "name": "辣椒资源",
+        "url": "http://lajiaozy.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "midnight",
+        "recommend": 0,
+        "verified": false,
+        "remark": "午夜资源"
+    },
+    {
+        "name": "155资源",
+        "url": "https://155zy.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "midnight",
+        "recommend": 0,
+        "verified": false,
+        "remark": "午夜资源"
+    },
+    {
+        "name": "滴滴资源",
+        "url": "https://didizy.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "midnight",
+        "recommend": 0,
+        "verified": false,
+        "remark": "午夜资源"
+    },
+    {
+        "name": "鲨鱼资源",
+        "url": "https://shayuzy5.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "midnight",
+        "recommend": 0,
+        "verified": false,
+        "remark": "午夜资源"
+    },
+    {
+        "name": "奥斯卡资源",
+        "url": "https://aosikazy1.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "midnight",
+        "recommend": 0,
+        "verified": false,
+        "remark": " 午夜资源"
+    },
+    {
+        "name": "色猫资源",
+        "url": "https://semaozy8.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "midnight",
+        "recommend": 0,
+        "verified": false,
+        "remark": "午夜资源"
+    },
+    {
+        "name": "森林资源",
+        "url": "https://senlinzy.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "midnight",
+        "recommend": 0,
+        "verified": false,
+        "remark": "午夜资源"
+    },
+    {
+        "name": "黑料资源",
+        "url": "https://heiliaozy.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "midnight",
+        "recommend": 0,
+        "verified": false,
+        "remark": "午夜资源"
+    },
+    {
+        "name": "奶香香资源",
+        "url": "https://naixxzy.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "midnight",
+        "recommend": 0,
+        "verified": false,
+        "remark": "午夜资源"
+    },
+    {
+        "name": "幸资源",
+        "url": "https://xzytv.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "midnight",
+        "recommend": 0,
+        "verified": false,
+        "remark": "午夜资源"
+    },
+    {
+        "name": "杏吧资源",
+        "url": "https://sex8zy.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "midnight",
+        "recommend": 0,
+        "verified": false,
+        "remark": "午夜资源"
+    },
+    {
+        "name": "CK百货资源",
+        "url": "https://ckbh.me/api.php/provide/vod/",
+        "type": "2",
+        "category": "midnight",
+        "recommend": 0,
+        "verified": false,
+        "remark": "午夜资源"
+    },
+    {
+        "name": "百万资源",
+        "url": "https://bwzy.tv/api.php/provide/vod/",
+        "type": "2",
+        "category": "midnight",
+        "recommend": 0,
+        "verified": false,
+        "remark": "午夜资源"
+    },
+    {
+        "name": "桃花资源",
+        "url": "https://thzy1.me/api.php/provide/vod/",
+        "type": "2",
+        "category": "midnight",
+        "recommend": 0,
+        "verified": false,
+        "remark": "午夜资源"
+    },
+    {
+        "name": "豆豆资源",
+        "url": "https://doudouzy.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "midnight",
+        "recommend": 0,
+        "verified": false,
+        "remark": "午夜资源"
+    },
+    {
+        "name": "搜AV资源",
+        "url": "https://souavzyw.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "midnight",
+        "recommend": 0,
+        "verified": false,
+        "remark": "午 夜资源"
+    },
+    {
+        "name": "香蕉资源",
+        "url": "https://www.xiangjiaozyw.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "midnight",
+        "recommend": 0,
+        "verified": false,
+        "remark": "午夜资源"
+    },
+    {
+        "name": "91精品资源",
+        "url": "https://91jpzyw.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "midnight",
+        "recommend": 0,
+        "verified": false,
+        "remark": "午夜资源"
+    },
+    {
+        "name": "番茄资源",
+        "url": "https://fqzy.me/api.php/provide/vod/",
+        "type": "2",
+        "category": "midnight",
+        "recommend": 0,
+        "verified": false,
+        "remark": "午夜资源"
+    },
+    {
+        "name": "优优资源",
+        "url": "https://www.yyzywcj.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "midnight",
+        "recommend": 0,
+        "verified": false,
+        "remark": "午夜资源"
+    },
+    {
+        "name": "小鸡资源",
+        "url": "https://xiaojizy.live/api.php/provide/vod/",
+        "type": "2",
+        "category": "midnight",
+        "recommend": 0,
+        "verified": false,
+        "remark": "午夜资源"
+    },
+    {
+        "name": "红楼资源",
+        "url": "https://hlouzy.cn/api.php/provide/vod/",
+        "type": "2",
+        "category": "midnight",
+        "recommend": 0,
+        "verified": false,
+        "remark": "午夜资源"
+    },
+    {
+        "name": "老色逼资源",
+        "url": "https://laosebizy.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "midnight",
+        "recommend": 0,
+        "verified": false,
+        "remark": "午夜资源"
+    },
+    {
+        "name": "黄色仓库资源",
+        "url": "https://hsckzy001.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "midnight",
+        "recommend": 0,
+        "verified": false,
+        "remark": "午夜资源"
+    },
+    {
+        "name": "大奶子资源",
+        "url": "https://danaizizy.com/api.php/provide/vod/",
+        "type": "2",
+        "category": "midnight",
+        "recommend": 0,
+        "verified": false,
+        "remark": "午夜资源"
+    },
+    {
+        "name": "优优TV资源",
+        "url": "https://yytv.cc/api.php/provide/vod/",
+        "type": "2",
+        "category": "midnight",
+        "recommend": 0,
+        "verified": false,
+        "remark": "午夜资源"
+    }
+]

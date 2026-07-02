@@ -1,0 +1,32 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# 构建产物
+app/build/
+.kotlin/
+
+# 开发环境
+.trae/
+
+# 临时文档
+DEVELOPMENT_PROGRESS.md
+报错.log
+
+# 第三方压缩包
+DKVideoPlayer-3.3.7.zip
+
+# 可直接从 GitHub Release 下载的 APK
+*.apk
